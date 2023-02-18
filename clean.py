@@ -15,3 +15,5 @@ result = result.dropna(how='any')
 output = result[~result['job'].str.contains('insurance') == True]
 output = output[~output['job'].str.contains('Insurance') == True]
 output.to_csv(output_file, index=False)
+
+print(output.info())
